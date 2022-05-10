@@ -1,5 +1,11 @@
 import { useSelector,useDispatch } from 'react-redux';
 import { useFetchContactsQuery, useDeleteContactMutation } from 'redux/contactsApi';
+import { Suspense, Routes, Route } from 'react-router-dom';
+import {AppBar} from '../AppBar/AppBar'
+import {Login} from '../views/LoginView'
+import { Contacts } from '../views/ContactsView'
+import { Register } from '../views/RegisterView'
+
 import { Form } from '../Form/Form';
 import {Filter} from '../Filter/Filter';
 import {ContactList} from '../ContactList/ContactList';
@@ -25,13 +31,24 @@ export default function App() {
     };
 
     return (
-        <Container>        
-            <h1>Phonebook</h1>        
+        <Container> 
+            {/* <Suspense> */}
+            <Routes>
+                <Route path="/" element={<AppBar/>}>
+                    {/* <Route path="contacts" element={<Contacts/>}/> */}
+                    {/* <Route path="register" element={<Register/>}/> */}
+                    <Route path="login" element={<Login/>}/>
+                </Route>        
+            </Routes>
+            {/* <h1>Phonebook</h1>        
             <Form/>
             <Filter value={filter} onChange={changeFilter} />
             <h2>Contacts</h2>
             {isFetching && <Rings height="60" width="60" color='black'/>}
-            {data && <ContactList filteredContact={filteredContact()} deleteContact={deleteContact}/>}
+            {data && <ContactList filteredContact={filteredContact()} deleteContact={deleteContact} />} */}
+            {/* <Login/> */}
+            {/* </Suspense> */}
+           
         </Container>
     );    
 };
