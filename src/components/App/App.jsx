@@ -1,6 +1,6 @@
 // import { useSelector,useDispatch } from 'react-redux';
 // import { useFetchContactsQuery, useDeleteContactMutation } from 'redux/contactsApi';
-import { Suspense, Routes, Route } from 'react-router-dom';
+import {  Routes, Route } from 'react-router-dom';
 import {AppBar} from '../AppBar/AppBar'
 import {LoginView} from '../views/LoginView/LoginView'
 import { ContactsView } from '../views/ContactsView/ContactsView'
@@ -35,8 +35,8 @@ export default function App() {
             {/* <Suspense> */}
             <Routes>
                 <Route path="/" element={<AppBar/>}>
-                    <Route path="contacts" element={<ContactsView/>}/>
-                    <Route path="register" element={<RegisterView/>}/>
+                    {/* <Route path="contacts" element={<ContactsView/>}/> */}
+                    {/* <Route path="register" element={<RegisterView/>}/> */}
                     <Route path="login" element={<LoginView/>}/>
                 </Route>        
             </Routes>
