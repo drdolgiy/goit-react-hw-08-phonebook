@@ -35,8 +35,8 @@ export default function App() {
             {/* <Suspense> */}
             <Routes>
                 <Route path="/" element={<AppBar/>}>
-                    {/* <Route path="contacts" element={<Contacts/>}/> */}
-                    {/* <Route path="register" element={<Register/>}/> */}
+                    <Route path="contacts" element={<Contacts/>}/>
+                    <Route path="register" element={<Register/>}/>
                     <Route path="login" element={<Login/>}/>
                 </Route>        
             </Routes>
