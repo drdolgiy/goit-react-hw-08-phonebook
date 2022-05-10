@@ -3,8 +3,8 @@
 import {  Routes, Route } from 'react-router-dom';
 import {AppBar} from '../AppBar/AppBar'
 import {LoginView} from '../views/LoginView/LoginView'
-import { ContactsView } from '../views/ContactsView/ContactsView'
-import { RegisterView } from '../views/RegisterView/RegisterView'
+// import { ContactsView } from '../views/ContactsView/ContactsView'
+// import { RegisterView } from '../views/RegisterView/RegisterView'
 
 // import { Form } from '../Form/Form';
 // import {Filter} from '../Filter/Filter';
