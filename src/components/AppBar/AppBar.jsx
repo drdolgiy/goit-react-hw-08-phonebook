@@ -1,5 +1,5 @@
-import { NavLink, Outlet } from "react-router-dom";
-import styled from "@emotion/styled";
+// import { NavLink, Outlet } from "react-router-dom";
+// import styled from "@emotion/styled";
 // import { Wrapper, Nav } from "pages/HomePage/HomePageStyle.styled"
 import { useSelector } from "react-redux";
 import { authSelectors } from "redux/auth/auth-selector";
