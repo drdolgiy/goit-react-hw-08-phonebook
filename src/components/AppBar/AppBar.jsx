@@ -11,10 +11,10 @@ import { AuthNav } from "components/AuthNav"
 import {UserMenu} from "components/UserMenu/UserMenu"
 import {AppBarStyled} from "components/AppBar/AppBar.styled"
 
-const Link = styled(NavLink)`
-    &.active {
-    color: tomato;
-  }`;
+// const Link = styled(NavLink)`
+//     &.active {
+//     color: tomato;
+//   }`;
 
 export const AppBar = () => {
     const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
