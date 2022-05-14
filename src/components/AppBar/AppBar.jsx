@@ -9,7 +9,7 @@ import { authSelectors } from "redux/auth/auth-selector";
 
 import { Navigation } from "components/Navigation";
 import { AuthNav } from "components/AuthNav"
-import {UserMenu} from "components/UserMenu/UserMenu"
+import {UserMenu} from "components/views/UserMenu/UserMenu"
 import {AppBarStyled} from "components/AppBar/AppBar.styled"
 
 // const Link = styled(NavLink)`

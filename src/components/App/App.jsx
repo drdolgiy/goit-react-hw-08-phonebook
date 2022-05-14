@@ -4,9 +4,9 @@
 import {  Routes, Route, } from 'react-router-dom';
 import {AppBar} from '../AppBar/AppBar'
 import {LoginView} from '../views/LoginView/LoginView'
-// import { ContactsView } from '../views/ContactsView/ContactsView'
+import { ContactsView } from '../views/ContactsView/ContactsView'
 import { RegisterView } from '../views/RegisterView/RegisterView';
-import { UserMenu } from 'components/UserMenu/UserMenu';
+import { UserMenu } from 'components/views/UserMenu/UserMenu';
 
 // import { Form } from '../Form/Form';
 // import {Filter} from '../Filter/Filter';
@@ -37,6 +37,7 @@ export default function App() {
             {/* <Suspense> */}
             <Routes>
                 <Route path="/" element={<AppBar/>}>
+                    <Route path="contacts" element={<ContactsView/>}/>
                     <Route path="register" element={<RegisterView/>}/>
                     <Route path="login" element={<LoginView />} />
                     <Route path="usermenu" element={<UserMenu />} />                
