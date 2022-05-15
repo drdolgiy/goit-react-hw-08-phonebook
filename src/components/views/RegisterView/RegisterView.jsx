@@ -1,8 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import {operations} from "redux/auth/auth-operations";
-// import {useFetchUsersQuery} from 'redux/Auth/registerApi'
-
 
 export const RegisterView = () => {
     const dispatch = useDispatch();

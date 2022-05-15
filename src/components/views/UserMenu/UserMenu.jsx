@@ -4,11 +4,11 @@ import {operations} from "redux/auth/auth-operations";
 
 export const UserMenu = () => {
     const dispatch = useDispatch();
-    const name = useSelector(authSelectors.getUsername);
+    const email = useSelector(authSelectors.getUseremail);
 
     return (
         <div>
-            <span>Wellcome, {name}</span>
+            <span>Wellcome, {email}</span>
             <button type="button" onClick={() => dispatch(operations.logOut())}>Log Out</button>
         </div>
     )
