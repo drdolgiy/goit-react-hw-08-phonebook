@@ -3,6 +3,10 @@ import styled from "@emotion/styled";
 
 
 const Link = styled(NavLink)`
+    text-decoration: none;
+    margin-left: 10px;
+    font-weigth: 500;
+    font-size: 18px;
     &.active {
     color: tomato;
   }`;
