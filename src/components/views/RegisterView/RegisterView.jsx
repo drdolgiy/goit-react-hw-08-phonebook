@@ -1,6 +1,9 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import {operations} from "redux/auth/auth-operations";
+import { operations } from "redux/auth/auth-operations";
+import { RegisterContainer, Input, Form, Label } from "./RegisterView.styled";
+
+
 
 export const RegisterView = () => {
     const dispatch = useDispatch();
@@ -8,7 +11,7 @@ export const RegisterView = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     
-    const HandleChange = ({ target: {name, value} }) => {
+    const HandleChange = ({ target: { name, value } }) => {
         switch (name) {
             case 'name':
                 return setName(value);
@@ -30,41 +33,41 @@ export const RegisterView = () => {
     }
 
     return (
-        <div>
+        <RegisterContainer>
             <h1>Registration</h1>
-            <form onSubmit={handleSubmit} autoComplete="off">
-                <label>
+            <Form onSubmit={handleSubmit} autoComplete="off">
+                <Label>
                     Name
-                    <input
+                    <Input
                         type="text"
                         name="name"
                         placeholder="Name"
                         value={name}
                         onChange={HandleChange}
                     />
-                </label>
-                <label>
+                </Label>
+                <Label>
                     Email
-                    <input                    
+                    <Input
                         type="email"
                         name="email"
                         placeholder="Email"
                         value={email}
                         onChange={HandleChange}
                     />
-                </label>
-                <label>
+                </Label>
+                <Label>
                     Password
-                    <input
+                    <Input
                         type="password"
                         name="password"
                         placeholder="Password"
                         value={password}
                         onChange={HandleChange}
                     />
-                </label>
+                </Label>
                 <button type='submit'>Register</button>
-            </form>
-        </div>        
+            </Form>
+        </RegisterContainer>
     )
-}
+};

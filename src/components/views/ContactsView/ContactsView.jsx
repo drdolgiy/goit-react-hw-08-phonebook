@@ -3,7 +3,8 @@ import { ContactList } from "components/Contacts/ContactList/ContactList";
 import { useFetchContactsQuery, useDeleteContactMutation } from 'redux/contacts/contactsApi';
 import { filteredContacts } from "redux/filterSlice";
 import { Form } from "components/Contacts/Form/Form";
-import { Filter} from "components/Filter/Filter";
+import { Filter } from "components/Filter/Filter";
+import { ContactContainer } from "./ContactsView.styled";
 
 
 export const ContactsView = () => {
@@ -24,10 +25,10 @@ export const ContactsView = () => {
     };
 
     return (
-        <div>
+        <ContactContainer>
             <Form />
             <Filter value={filter} onChange={changeFilter} />
             {data && <ContactList filteredContact={filteredContact()} deleteContact={deleteContact} />}
-        </div>
+        </ContactContainer>
     )
 }
