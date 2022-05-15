@@ -7,7 +7,7 @@ export const ContactList = ({  deleteContact, filteredContact }) => {
         <ul>
             {filteredContact.map(item => {
                 return (
-                    <ListItem key={item.id}>{item.name}: {item.phone}
+                    <ListItem key={item.id}>{item.name}: {item.number}
                         <DeleteButton type="button"
                             onClick={() => deleteContact(item.id)}>Delete</DeleteButton>
                     </ListItem>

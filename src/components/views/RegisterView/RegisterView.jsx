@@ -7,7 +7,6 @@ import {operations} from "redux/auth/auth-operations";
 export const RegisterView = () => {
     const dispatch = useDispatch();
     const [name, setName] = useState('');
-    // console.log(name)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     
